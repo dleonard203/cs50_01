@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+<div class="container">
+    <h1>Welcome, {{ username }}!</h1>
+    <p>The team at Bookworm looks forward to your contributions 😃</p>
+    <a href="{{ url_for('index') }}"><button class="btn btn-primary">Click here to go back home</button></a>
+</div>
+
+{% endblock %}

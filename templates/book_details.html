@@ -1,0 +1,52 @@
+{% extends "logged_in.html" %}
+
+{% block body %}
+
+<div class="container">
+        <div class="card results">
+            <div class="card-header"><strong>Title:</strong> {{ book[2] }}</div>
+                <div class="card-body">
+                    <p><strong>Author:</strong> {{ book[3] }}</p>
+                    <p><strong>ISBN: </strong>{{ book[1] }}</p>
+                    <p><strong>Goodreads Average Rating: </strong> {{ rating }} </p>
+                    <p><strong>Goodreads Review Count: </strong> {{ review_count }} </p>
+                </div>
+                </div>
+            </div>
+
+{% if reviews == [] %}
+<div class="container">
+    <p>No reviews have been left yet</p>
+</div>
+{% else %}
+<div class="container comments">
+{% for review in reviews %}
+<div class="single-comment">
+    <p class="review-header">Review by: {{ review.username }}</p>
+    <p class="review-header">Posted on: {{ review.date }}</p>
+    <p class="review-header">Number of Stars: {{ review.rating }}</p>
+    <p class="content">{{ review.content }}</p>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
+<div class="container review">
+    <p>{{ msg }}</p>
+    <p>Have you read this book? Post your own review!</p>
+    <form method="post" class="review">
+        <textarea rows="4" cols="100" name="content" placeholder="Enter your review here"></textarea>
+        <br>
+        <p>Rating:</p>
+        <input type="radio" name="rating" value=1 required> 1 <br>
+        <input type="radio" name="rating" value=2 required> 2 <br>
+        <input type="radio" name="rating" value=3 required> 3 <br>
+        <input type="radio" name="rating" value=4 required> 4 <br>
+        <input type="radio" name="rating" value=5 required> 5 <br>
+
+        <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+    
+</div>
+<p></p>
+{% endblock %}

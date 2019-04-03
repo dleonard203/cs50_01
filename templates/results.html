@@ -1,0 +1,23 @@
+{% extends "logged_in.html" %}
+
+{% block body %}
+
+<div class="container">
+    <p>{{ msg }}</p>
+</div>
+
+{% for book in books %}
+<div class="container">
+<div class="card results">
+    <div class="card-header"><strong>Title:</strong> {{ book[2] }}</div>
+        <div class="card-body">
+            <p><strong>Author:</strong> {{ book[3] }}</p>
+            <p><strong>ISBN: </strong>{{ book[1] }}</p>
+            <p><a href="/book/{{ book[1] }}">Click here for reviews!</a></p>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}

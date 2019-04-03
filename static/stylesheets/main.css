@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(202, 207, 202);
+}
+
+.error {
+    color: red;
+    font-size: 20px;
+}
+
+.navbar {
+    background-color:rgb(255, 142, 142);
+    margin-left:14%;
+    margin-right:14%;
+    margin-bottom:40px;
+}
+.navheader {
+    color: rgb(63, 47, 214);
+    
+}
+
+.navheader a {
+    color:white;
+}
+
+.search {
+    padding:30px;
+}
+
+#logout {
+    color: #fff;
+}
+
+.results {
+    margin-bottom:20px;
+}
+
+.comments {
+    background-color: rgb(153, 217, 234);
+    border-style: solid;
+    border-color: black;
+    margin-bottom:30px;
+
+}
+
+.single-comment {
+    border-style: solid;
+    border-color: white;
+    padding-top: 5px;
+    padding-bottom:5px;
+    margin:20px;
+    padding-left: 15px;
+}
+
+.reiew {
+    padding-top:10rem;
+    margin-bottom:20px;
+}
+
+label {
+    display: block;
+}
+
+.review-header {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.content {
+    margin-top:60px;
+}
